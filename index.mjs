@@ -4,7 +4,7 @@ import getDeploymentUrl from './vercel.mjs'
 async function run() {
   try {
     const vercelToken = process.env.VERCEL_TOKEN
-    const githubRef = process.env.GITHUB_REF
+    const githubRef = process.env.GITHUB_HEAD_REF
     const githubProject = process.env.GITHUB_REPOSITORY
     const githubBranch = githubRef.replace('refs/heads/', '')
     const githubRepo = githubProject.split('/')[1]
