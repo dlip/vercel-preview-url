@@ -16,6 +16,7 @@ export default async function getDeploymentUrl(
     teamId,
     name: projectId
   }
+  console.log(query)
   const qs = querystring.stringify(query)
 
   core.info(`Fetching from: ${apiUrl}${deploymentsUrl}?${qs}`)
